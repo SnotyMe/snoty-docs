@@ -28,9 +28,14 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.blocks.caption
+  - toc:
+      permalink: true
 
 extra:
   homepage: https://snoty.me
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/SnotyMe
 extra_css:
   - stylesheets/logo.css
   - stylesheets/extra.css
