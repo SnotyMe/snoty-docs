@@ -1,0 +1,49 @@
+site_name: Snoty Docs
+site_url: https://docs.snoty.me
+
+theme:
+  name: material
+  logo: https://snoty.me/favicon.png
+  favicon: https://snoty.me/favicon.png
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+
+extra:
+  homepage: https://snoty.me
+extra_css:
+  - stylesheets/logo.css
+  - stylesheets/extra.css
+
+nav:
+  - Welcome: index.md
+  - Setup:
+    - Kubernetes: setup/kubernetes.md
+    - Development Environment: setup/dev.md
+  - Usage:
+      - Flows: usage/flows.md
+      - Nodes: usage/nodes.md
+  - Nodes:
+      - Introduction: nodes/introduction.md
+      - Built-In:
+          - HTTP: nodes/builtin/http.md
