@@ -24,6 +24,10 @@ theme:
         icon: material/weather-sunny
         name: Switch to light mode
 
+plugins:
+  - search
+  - include_dir_to_nav
+
 markdown_extensions:
   - attr_list
   - md_in_html
@@ -50,5 +54,4 @@ nav:
       - Nodes: usage/nodes.md
   - Nodes:
       - Introduction: nodes/introduction.md
-      - Built-In:
-          - HTTP: nodes/builtin/http.md
+      - Built-In: nodes/builtin
