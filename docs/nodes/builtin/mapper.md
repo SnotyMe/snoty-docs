@@ -33,22 +33,23 @@ the correct data types, the names are simply incompatible.
 ## Liquid
 
 The Shopify-developed engine is a powerful and flexible templating language that allows for complex data
-transformations. It supports loops, conditionals, filters, and more. \
+transformations. It supports loops, conditionals, filters, and more.  
 The [Liqp](https://github.com/bkiers/Liqp) library provides the Liquid templating engine. Therefore, the behavior may
 not mimic the original Ruby-based Liquid engine perfectly. For the most part, it should work as expected though.
 
 As Liquid is a nicely documented language with a ton of features, please refer to the official documentation:
-https://shopify.github.io/liquid/basics/introduction/
+[https://shopify.github.io/liquid/basics/introduction/]
 
 Apart from the generic features, Snoty also provides some custom filters and tags:
 
-1. `unidiff` filter
+1. `unidiff` filter <!-- md:version 0.5.0 -->
     - This filter is used to convert a list of dictionaries into a unified diff format. It takes a list of dictionaries
       and returns a string representing the unified diff.
     - Example:
       ```liquid
       {% assign diff = diff.change.description.old | unidiff diff.change.description.new %}
       ```
+2. `format` filter <!-- md:version next -->
 
 ## Examples
 ### List all changes
