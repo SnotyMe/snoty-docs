@@ -38,7 +38,7 @@ The [Liqp](https://github.com/bkiers/Liqp) library provides the Liquid templatin
 not mimic the original Ruby-based Liquid engine perfectly. For the most part, it should work as expected though.
 
 As Liquid is a nicely documented language with a ton of features, please refer to the official documentation:
-[https://shopify.github.io/liquid/basics/introduction/]
+<https://shopify.github.io/liquid/basics/introduction/>
 
 Apart from the generic features, Snoty also provides some custom filters and tags:
 
