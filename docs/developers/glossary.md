@@ -4,8 +4,7 @@
 Container consisting of [Nodes](#node) to model your intended behavior.
 
 ## Node
-The basic building block of Snoty. Encapsulates one specific action, and is therefore supposed to
-be connected to other Nodes in order to form a [Flow](#flow).
+--8<-- "includes/glossary/node.md"
 
 ## Service
 Snoty follows the IaC Service - Implementation pattern.
@@ -28,8 +27,8 @@ Most services are mainly business logic that isn't supposed to be overwritten. T
 for services that make sense to be replaceable in a modular way.
 Should you want to replace those services anyway, // TODO
 
-## Hook
---8<-- "includes/glossary/hooks.md"
+## [Hook](/hooks)
+--8<-- "includes/glossary/hook.md"
 
 // TODO: confirm name
 For example, the `PreBusinessHook` is called right before the business logic is started up, but after loading the Node Modules.

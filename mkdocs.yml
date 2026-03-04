@@ -32,6 +32,7 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.blocks.caption
+  - pymdownx.snippets
   - toc:
       permalink: true
   - pymdownx.emoji:
@@ -51,6 +52,9 @@ extra_css:
 hooks:
   - ./src/hooks/shortcodes.py
 
+watch:
+  - docs
+
 nav:
   - Welcome: index.md
   - Setup:
@@ -62,3 +66,4 @@ nav:
   - Nodes:
       - Introduction: nodes/introduction.md
       - Built-In: nodes/builtin
+  - Developers: developers/
