@@ -1,0 +1,4 @@
+.md-logo {
+	/* make logo white */
+	filter: brightness(1337);
+}

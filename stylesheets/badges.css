@@ -1,0 +1,48 @@
+/*
+Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS
+*/
+
+.md-typeset .mdx-badge {
+  font-size: 0.85em;
+}
+
+.md-typeset .mdx-badge--right {
+  float: right;
+  margin-left: 0.35em;
+}
+
+.md-typeset .mdx-badge__icon {
+  padding: 0.25em;
+  background: var(--md-accent-fg-color--transparent);
+  border-start-start-radius: 0.25em;
+  border-end-start-radius: 0.25em;
+}
+
+.md-typeset .mdx-badge__icon:last-child {
+  border-radius: 0.25em;
+}
+
+.md-typeset .mdx-badge__text {
+  padding: 0.25em 0.5em;
+  border-start-end-radius: 0.25em;
+  border-end-end-radius: 0.25em;
+  box-shadow: 0 0 0 1px inset var(--md-accent-fg-color--transparent);
+}
