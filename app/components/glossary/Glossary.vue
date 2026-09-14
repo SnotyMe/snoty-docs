@@ -3,28 +3,16 @@ const { data: terms } = await useAsyncData('glossary', () =>
     queryCollection("glossary").all()
 )
 
-definePageMeta({
-  page: {
-    title: 'Glossary',
-    body: {
-      toc: {
-        links: terms.value?.map(term => ({
-          id: term.stem,
-          text: term.title,
-          depth: 2
-        })) || []
-      }
-    }
-  }
-})
-
+const toc = computed(() => terms.value?.map(it => ({ text: it.title })));
+const route = useRoute()
+route.meta.toc = toc
 </script>
 
 <template>
   <div v-if="terms">
     <div v-for="term of terms">
-      <UHeader>{{ term.title }}</UHeader>
-      <ContentRenderer v-for="term of terms" :value="term" />
+      <ProseH2>{{ term.title }}</ProseH2>
+      <ContentRenderer :value="term.body" />
     </div>
   </div>
 </template>
