@@ -24,6 +24,16 @@ export default defineNuxtConfig({
         },
     },
 
+    content: {
+        build: {
+            markdown: {
+                highlight: {
+                    langs: ["diff", "json", "yaml", "html", "vue", "shell", "batch", "md", "mdc", "liquid"]
+                }
+            }
+        }
+    },
+
     llms: {
         domain: 'https://docs.snoty.me',
     },
