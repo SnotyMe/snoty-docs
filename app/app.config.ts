@@ -6,4 +6,7 @@ export default defineAppConfig({
             favicon: '/favicon.png',
         },
     },
+    navigation: {
+        sub: 'header',
+    },
 })
