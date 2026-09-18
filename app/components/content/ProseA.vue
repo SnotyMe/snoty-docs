@@ -11,7 +11,7 @@ const isExternal = computed(() => props.href.startsWith('http') || props.href.st
 <template>
   <ULink
       :to="href"
-      :target="target"
+      :target="target ?? (isExternal ? '_blank' : '_self')"
       :rel="rel"
       :active="true"
   >
