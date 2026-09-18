@@ -1,0 +1,35 @@
+{
+  "type": "parsejson",
+  "metadata": {
+    "displayName": "Parse JSON",
+    "icon": {
+      "name": "lucide-braces",
+      "color": null
+    },
+    "type": "parsejson",
+    "position": "MIDDLE",
+    "settings": [
+      {
+        "name": "fields",
+        "type": "Collection",
+        "defaultValue": null,
+        "displayName": "Fields",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Collection",
+          "elementDetails": {
+            "type": "Plaintext",
+            "lines": 1,
+            "defaultValue": "",
+            "language": null
+          }
+        }
+      }
+    ],
+    "input": [],
+    "receiveEmptyInput": false,
+    "output": []
+  }
+}

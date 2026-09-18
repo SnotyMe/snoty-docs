@@ -1,0 +1,35 @@
+{
+  "type": "emitjson",
+  "metadata": {
+    "displayName": "Emit JSON",
+    "icon": {
+      "name": "lucide-braces",
+      "color": null
+    },
+    "type": "emitjson",
+    "position": "START",
+    "settings": [
+      {
+        "name": "data",
+        "type": "Collection",
+        "defaultValue": null,
+        "displayName": "Data",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Collection",
+          "elementDetails": {
+            "type": "Plaintext",
+            "lines": 1,
+            "defaultValue": "",
+            "language": "json"
+          }
+        }
+      }
+    ],
+    "input": null,
+    "receiveEmptyInput": false,
+    "output": []
+  }
+}

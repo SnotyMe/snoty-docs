@@ -1,0 +1,257 @@
+{
+  "type": "moodle_assignments",
+  "metadata": {
+    "displayName": "Moodle",
+    "icon": {
+      "name": "devicon-moodle",
+      "color": null
+    },
+    "type": "moodle_assignments",
+    "position": "START",
+    "settings": [
+      {
+        "name": "credentials",
+        "type": "Credential",
+        "defaultValue": null,
+        "displayName": "Credentials",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Credential",
+          "credentialType": "Moodle",
+          "schema": [
+            {
+              "name": "baseUrl",
+              "type": "Plaintext",
+              "defaultValue": null,
+              "displayName": "Base URL",
+              "description": "Full Base URL of the Moodle URL (Dashboard page)",
+              "hidden": false,
+              "censored": false,
+              "details": {
+                "type": "Plaintext",
+                "lines": 1,
+                "defaultValue": "",
+                "language": null
+              }
+            },
+            {
+              "name": "username",
+              "type": "Plaintext",
+              "defaultValue": null,
+              "displayName": "Username",
+              "description": null,
+              "hidden": false,
+              "censored": false,
+              "details": {
+                "type": "Plaintext",
+                "lines": 1,
+                "defaultValue": "",
+                "language": null
+              }
+            },
+            {
+              "name": "appSecret",
+              "type": "Plaintext",
+              "defaultValue": null,
+              "displayName": "App Secret",
+              "description": null,
+              "hidden": false,
+              "censored": true,
+              "details": {
+                "type": "Plaintext",
+                "lines": 1,
+                "defaultValue": "",
+                "language": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "emitDoneAssignments",
+        "type": "Boolean",
+        "defaultValue": "false",
+        "displayName": "Emit Done Assignments",
+        "description": "Whether to emit 'done' assignments (may break auto deletions on assignment completion)",
+        "hidden": false,
+        "censored": false,
+        "details": null
+      },
+      {
+        "name": "emitClosedAssignments",
+        "type": "Boolean",
+        "defaultValue": "true",
+        "displayName": "Emit Closed Assignments",
+        "description": "Whether to emit 'closed' assignments (you cannot submit anything)",
+        "hidden": false,
+        "censored": false,
+        "details": null
+      },
+      {
+        "name": "emitPastAssignments",
+        "type": "Boolean",
+        "defaultValue": "false",
+        "displayName": "Emit Past Assignments",
+        "description": "Fixes a bug where past assignments are emitted again as if they were new. You probably don't want to enable this.",
+        "hidden": true,
+        "censored": false,
+        "details": null
+      }
+    ],
+    "input": null,
+    "receiveEmptyInput": false,
+    "output": [
+      {
+        "name": "id",
+        "type": "Long",
+        "defaultValue": null,
+        "displayName": "Id",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": null
+      },
+      {
+        "name": "instance",
+        "type": "Long",
+        "defaultValue": null,
+        "displayName": "Instance",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": null
+      },
+      {
+        "name": "name",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Name",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      },
+      {
+        "name": "description",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Description",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      },
+      {
+        "name": "due",
+        "type": "Instant",
+        "defaultValue": null,
+        "displayName": "Due",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": null
+      },
+      {
+        "name": "state",
+        "type": "Enum",
+        "defaultValue": null,
+        "displayName": "State",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Enum",
+          "values": [
+            {
+              "value": "CLOSED",
+              "displayName": "Closed"
+            },
+            {
+              "value": "DUE",
+              "displayName": "Due"
+            },
+            {
+              "value": "DONE",
+              "displayName": "Done"
+            },
+            {
+              "value": "OVERDUE",
+              "displayName": "Overdue"
+            },
+            {
+              "value": "PAST",
+              "displayName": "Past"
+            }
+          ]
+        }
+      },
+      {
+        "name": "course",
+        "type": "Object",
+        "defaultValue": null,
+        "displayName": "Course",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Object",
+          "className": "me.snoty.integration.moodle.model.raw.MoodleCourse",
+          "schema": [
+            {
+              "name": "id",
+              "type": "Long",
+              "defaultValue": null,
+              "displayName": "Id",
+              "description": null,
+              "hidden": false,
+              "censored": false,
+              "details": null
+            },
+            {
+              "name": "fullname",
+              "type": "Plaintext",
+              "defaultValue": null,
+              "displayName": "Fullname",
+              "description": null,
+              "hidden": false,
+              "censored": false,
+              "details": {
+                "type": "Plaintext",
+                "lines": 1,
+                "defaultValue": "",
+                "language": null
+              }
+            },
+            {
+              "name": "shortname",
+              "type": "Plaintext",
+              "defaultValue": null,
+              "displayName": "Shortname",
+              "description": null,
+              "hidden": false,
+              "censored": false,
+              "details": {
+                "type": "Plaintext",
+                "lines": 1,
+                "defaultValue": "",
+                "language": null
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

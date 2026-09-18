@@ -1,0 +1,123 @@
+{
+  "type": "ical",
+  "metadata": {
+    "displayName": "ICal",
+    "icon": {
+      "name": "lucide-calendar-days",
+      "color": null
+    },
+    "type": "ical",
+    "position": "END",
+    "settings": [
+      {
+        "name": "secret",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Secret",
+        "description": "A secret that has to be provided to access the calendar",
+        "hidden": false,
+        "censored": true,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      }
+    ],
+    "input": [
+      {
+        "name": "id",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Id",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      },
+      {
+        "name": "name",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Name",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      },
+      {
+        "name": "date",
+        "type": "Instant?",
+        "defaultValue": null,
+        "displayName": "Date",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": null
+      },
+      {
+        "name": "startDate",
+        "type": "Instant?",
+        "defaultValue": null,
+        "displayName": "Start Date",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": null
+      },
+      {
+        "name": "endDate",
+        "type": "Instant?",
+        "defaultValue": null,
+        "displayName": "End Date",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": null
+      },
+      {
+        "name": "description",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Description",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      },
+      {
+        "name": "location",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Location",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      }
+    ],
+    "receiveEmptyInput": false,
+    "output": null
+  }
+}

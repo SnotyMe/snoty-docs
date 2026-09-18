@@ -1,0 +1,158 @@
+{
+  "type": "smtp",
+  "metadata": {
+    "displayName": "SMTP",
+    "icon": {
+      "name": "lucide-mail",
+      "color": null
+    },
+    "type": "smtp",
+    "position": "END",
+    "settings": [
+      {
+        "name": "host",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Host",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      },
+      {
+        "name": "port",
+        "type": "Int",
+        "defaultValue": null,
+        "displayName": "Port",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": null
+      },
+      {
+        "name": "startTls",
+        "type": "Boolean",
+        "defaultValue": null,
+        "displayName": "STARTTLS",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": null
+      },
+      {
+        "name": "username",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Username",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      },
+      {
+        "name": "password",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Password",
+        "description": null,
+        "hidden": false,
+        "censored": true,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      },
+      {
+        "name": "from",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "From",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      },
+      {
+        "name": "to",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "To",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      },
+      {
+        "name": "mimeType",
+        "type": "Plaintext",
+        "defaultValue": "text/html; charset=utf-8",
+        "displayName": "Mime Type",
+        "description": null,
+        "hidden": true,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      }
+    ],
+    "input": [
+      {
+        "name": "subject",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Subject",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      },
+      {
+        "name": "body",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Body",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      }
+    ],
+    "receiveEmptyInput": false,
+    "output": null
+  }
+}

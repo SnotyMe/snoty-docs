@@ -1,0 +1,101 @@
+{
+  "type": "mapper",
+  "metadata": {
+    "displayName": "Mapper",
+    "icon": {
+      "name": "lucide-shuffle",
+      "color": null
+    },
+    "type": "mapper",
+    "position": "MIDDLE",
+    "settings": [
+      {
+        "name": "engine",
+        "type": "Enum",
+        "defaultValue": null,
+        "displayName": "Engine",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Enum",
+          "values": [
+            {
+              "value": "REPLACE",
+              "displayName": "Replace"
+            },
+            {
+              "value": "LIQUID",
+              "displayName": "Liquid"
+            }
+          ]
+        }
+      },
+      {
+        "name": "fields",
+        "type": "Map",
+        "defaultValue": null,
+        "displayName": "Fields",
+        "description": "The fields to map - every key will be part of the output object",
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Map",
+          "keyDetails": {
+            "type": "Plaintext",
+            "lines": 1,
+            "defaultValue": "",
+            "language": null
+          },
+          "valueDetails": {
+            "type": "Plaintext",
+            "lines": 1,
+            "defaultValue": "",
+            "language": "liquid"
+          }
+        }
+      },
+      {
+        "name": "preserveId",
+        "type": "Boolean",
+        "defaultValue": "true",
+        "displayName": "Preserve Id",
+        "description": "If true, the ID of the input object will be preserved in the output object",
+        "hidden": false,
+        "censored": false,
+        "details": null
+      },
+      {
+        "name": "trim",
+        "type": "Boolean",
+        "defaultValue": "true",
+        "displayName": "Trim",
+        "description": "If true, every line of the output will be trimmed to remove surrounding non-visible characters. Useful for Liquid templates with indents.",
+        "hidden": true,
+        "censored": false,
+        "details": null
+      },
+      {
+        "name": "preserveFields",
+        "type": "Collection",
+        "defaultValue": null,
+        "displayName": "Preserve Fields",
+        "description": null,
+        "hidden": true,
+        "censored": false,
+        "details": {
+          "type": "Collection",
+          "elementDetails": {
+            "type": "Plaintext",
+            "lines": 1,
+            "defaultValue": "",
+            "language": null
+          }
+        }
+      }
+    ],
+    "input": [],
+    "receiveEmptyInput": false,
+    "output": []
+  }
+}

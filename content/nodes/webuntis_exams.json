@@ -1,0 +1,616 @@
+{
+  "type": "webuntis_exams",
+  "metadata": {
+    "displayName": "WebUntis Exams",
+    "icon": {
+      "name": "arcticons-untis-mobile",
+      "color": "#FF6033"
+    },
+    "type": "webuntis_exams",
+    "position": "START",
+    "settings": [
+      {
+        "name": "baseUrl",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Base Url",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      },
+      {
+        "name": "school",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "School",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      },
+      {
+        "name": "username",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Username",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      },
+      {
+        "name": "appSecret",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "App Secret",
+        "description": null,
+        "hidden": false,
+        "censored": true,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      }
+    ],
+    "input": null,
+    "receiveEmptyInput": false,
+    "output": [
+      {
+        "name": "id",
+        "type": "Int",
+        "defaultValue": null,
+        "displayName": "Id",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": null
+      },
+      {
+        "name": "raw",
+        "type": "Object",
+        "defaultValue": null,
+        "displayName": "Raw",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Object",
+          "className": "me.snoty.integration.untis.model.UntisExam",
+          "schema": [
+            {
+              "name": "id",
+              "type": "Int",
+              "defaultValue": null,
+              "displayName": "Id",
+              "description": null,
+              "hidden": false,
+              "censored": false,
+              "details": null
+            },
+            {
+              "name": "examType",
+              "type": "Plaintext",
+              "defaultValue": null,
+              "displayName": "Exam Type",
+              "description": null,
+              "hidden": false,
+              "censored": false,
+              "details": {
+                "type": "Plaintext",
+                "lines": 1,
+                "defaultValue": "",
+                "language": null
+              }
+            },
+            {
+              "name": "startDateTime",
+              "type": "Object",
+              "defaultValue": null,
+              "displayName": "Start Date Time",
+              "description": null,
+              "hidden": false,
+              "censored": false,
+              "details": {
+                "type": "Object",
+                "className": "me.snoty.integration.untis.model.UntisDateTime",
+                "schema": [
+                  {
+                    "name": "dateTime",
+                    "type": "Instant",
+                    "defaultValue": null,
+                    "displayName": "Date Time",
+                    "description": null,
+                    "hidden": false,
+                    "censored": false,
+                    "details": null
+                  }
+                ]
+              }
+            },
+            {
+              "name": "endDateTime",
+              "type": "Object",
+              "defaultValue": null,
+              "displayName": "End Date Time",
+              "description": null,
+              "hidden": false,
+              "censored": false,
+              "details": {
+                "type": "Object",
+                "className": "me.snoty.integration.untis.model.UntisDateTime",
+                "schema": [
+                  {
+                    "name": "dateTime",
+                    "type": "Instant",
+                    "defaultValue": null,
+                    "displayName": "Date Time",
+                    "description": null,
+                    "hidden": false,
+                    "censored": false,
+                    "details": null
+                  }
+                ]
+              }
+            },
+            {
+              "name": "departmentId",
+              "type": "Int",
+              "defaultValue": null,
+              "displayName": "Department Id",
+              "description": null,
+              "hidden": false,
+              "censored": false,
+              "details": null
+            },
+            {
+              "name": "subjectId",
+              "type": "Int",
+              "defaultValue": null,
+              "displayName": "Subject Id",
+              "description": null,
+              "hidden": false,
+              "censored": false,
+              "details": null
+            },
+            {
+              "name": "klasseIds",
+              "type": "Collection",
+              "defaultValue": null,
+              "displayName": "Klasse Ids",
+              "description": null,
+              "hidden": false,
+              "censored": false,
+              "details": {
+                "type": "Collection",
+                "elementDetails": null
+              }
+            },
+            {
+              "name": "roomIds",
+              "type": "Collection",
+              "defaultValue": null,
+              "displayName": "Room Ids",
+              "description": null,
+              "hidden": false,
+              "censored": false,
+              "details": {
+                "type": "Collection",
+                "elementDetails": null
+              }
+            },
+            {
+              "name": "teacherIds",
+              "type": "Collection",
+              "defaultValue": null,
+              "displayName": "Teacher Ids",
+              "description": null,
+              "hidden": false,
+              "censored": false,
+              "details": {
+                "type": "Collection",
+                "elementDetails": null
+              }
+            },
+            {
+              "name": "name",
+              "type": "Plaintext",
+              "defaultValue": null,
+              "displayName": "Name",
+              "description": null,
+              "hidden": false,
+              "censored": false,
+              "details": {
+                "type": "Plaintext",
+                "lines": 1,
+                "defaultValue": "",
+                "language": null
+              }
+            },
+            {
+              "name": "text",
+              "type": "Plaintext",
+              "defaultValue": null,
+              "displayName": "Text",
+              "description": null,
+              "hidden": false,
+              "censored": false,
+              "details": {
+                "type": "Plaintext",
+                "lines": 1,
+                "defaultValue": "",
+                "language": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "examType",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Exam Type",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      },
+      {
+        "name": "startDateTime",
+        "type": "Object",
+        "defaultValue": null,
+        "displayName": "Start Date Time",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Object",
+          "className": "me.snoty.integration.untis.model.UntisDateTime",
+          "schema": [
+            {
+              "name": "dateTime",
+              "type": "Instant",
+              "defaultValue": null,
+              "displayName": "Date Time",
+              "description": null,
+              "hidden": false,
+              "censored": false,
+              "details": null
+            }
+          ]
+        }
+      },
+      {
+        "name": "endDateTime",
+        "type": "Object",
+        "defaultValue": null,
+        "displayName": "End Date Time",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Object",
+          "className": "me.snoty.integration.untis.model.UntisDateTime",
+          "schema": [
+            {
+              "name": "dateTime",
+              "type": "Instant",
+              "defaultValue": null,
+              "displayName": "Date Time",
+              "description": null,
+              "hidden": false,
+              "censored": false,
+              "details": null
+            }
+          ]
+        }
+      },
+      {
+        "name": "departmentId",
+        "type": "Int",
+        "defaultValue": null,
+        "displayName": "Department Id",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": null
+      },
+      {
+        "name": "subject",
+        "type": "Object",
+        "defaultValue": null,
+        "displayName": "Subject",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Object",
+          "className": "me.snoty.integration.untis.model.LongMasterElement",
+          "schema": [
+            {
+              "name": "id",
+              "type": "Int",
+              "defaultValue": null,
+              "displayName": "Id",
+              "description": null,
+              "hidden": false,
+              "censored": false,
+              "details": null
+            },
+            {
+              "name": "name",
+              "type": "Plaintext",
+              "defaultValue": null,
+              "displayName": "Name",
+              "description": null,
+              "hidden": false,
+              "censored": false,
+              "details": {
+                "type": "Plaintext",
+                "lines": 1,
+                "defaultValue": "",
+                "language": null
+              }
+            },
+            {
+              "name": "longName",
+              "type": "Plaintext",
+              "defaultValue": null,
+              "displayName": "Long Name",
+              "description": null,
+              "hidden": false,
+              "censored": false,
+              "details": {
+                "type": "Plaintext",
+                "lines": 1,
+                "defaultValue": "",
+                "language": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "classes",
+        "type": "Collection",
+        "defaultValue": null,
+        "displayName": "Classes",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Collection",
+          "elementDetails": {
+            "type": "Object",
+            "className": "me.snoty.integration.untis.model.LongMasterElement",
+            "schema": [
+              {
+                "name": "id",
+                "type": "Int",
+                "defaultValue": null,
+                "displayName": "Id",
+                "description": null,
+                "hidden": false,
+                "censored": false,
+                "details": null
+              },
+              {
+                "name": "name",
+                "type": "Plaintext",
+                "defaultValue": null,
+                "displayName": "Name",
+                "description": null,
+                "hidden": false,
+                "censored": false,
+                "details": {
+                  "type": "Plaintext",
+                  "lines": 1,
+                  "defaultValue": "",
+                  "language": null
+                }
+              },
+              {
+                "name": "longName",
+                "type": "Plaintext",
+                "defaultValue": null,
+                "displayName": "Long Name",
+                "description": null,
+                "hidden": false,
+                "censored": false,
+                "details": {
+                  "type": "Plaintext",
+                  "lines": 1,
+                  "defaultValue": "",
+                  "language": null
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "rooms",
+        "type": "Collection",
+        "defaultValue": null,
+        "displayName": "Rooms",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Collection",
+          "elementDetails": {
+            "type": "Object",
+            "className": "me.snoty.integration.untis.model.LongMasterElement",
+            "schema": [
+              {
+                "name": "id",
+                "type": "Int",
+                "defaultValue": null,
+                "displayName": "Id",
+                "description": null,
+                "hidden": false,
+                "censored": false,
+                "details": null
+              },
+              {
+                "name": "name",
+                "type": "Plaintext",
+                "defaultValue": null,
+                "displayName": "Name",
+                "description": null,
+                "hidden": false,
+                "censored": false,
+                "details": {
+                  "type": "Plaintext",
+                  "lines": 1,
+                  "defaultValue": "",
+                  "language": null
+                }
+              },
+              {
+                "name": "longName",
+                "type": "Plaintext",
+                "defaultValue": null,
+                "displayName": "Long Name",
+                "description": null,
+                "hidden": false,
+                "censored": false,
+                "details": {
+                  "type": "Plaintext",
+                  "lines": 1,
+                  "defaultValue": "",
+                  "language": null
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "teachers",
+        "type": "Collection",
+        "defaultValue": null,
+        "displayName": "Teachers",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Collection",
+          "elementDetails": {
+            "type": "Object",
+            "className": "me.snoty.integration.untis.model.TeacherMasterElement",
+            "schema": [
+              {
+                "name": "id",
+                "type": "Int",
+                "defaultValue": null,
+                "displayName": "Id",
+                "description": null,
+                "hidden": false,
+                "censored": false,
+                "details": null
+              },
+              {
+                "name": "name",
+                "type": "Plaintext",
+                "defaultValue": null,
+                "displayName": "Name",
+                "description": null,
+                "hidden": false,
+                "censored": false,
+                "details": {
+                  "type": "Plaintext",
+                  "lines": 1,
+                  "defaultValue": "",
+                  "language": null
+                }
+              },
+              {
+                "name": "firstName",
+                "type": "Plaintext",
+                "defaultValue": null,
+                "displayName": "First Name",
+                "description": null,
+                "hidden": false,
+                "censored": false,
+                "details": {
+                  "type": "Plaintext",
+                  "lines": 1,
+                  "defaultValue": "",
+                  "language": null
+                }
+              },
+              {
+                "name": "lastName",
+                "type": "Plaintext",
+                "defaultValue": null,
+                "displayName": "Last Name",
+                "description": null,
+                "hidden": false,
+                "censored": false,
+                "details": {
+                  "type": "Plaintext",
+                  "lines": 1,
+                  "defaultValue": "",
+                  "language": null
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "name",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Name",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      },
+      {
+        "name": "text",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Text",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      }
+    ]
+  }
+}

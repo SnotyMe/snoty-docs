@@ -1,0 +1,24 @@
+{
+  "type": "limit",
+  "metadata": {
+    "displayName": "Limit",
+    "icon": null,
+    "type": "limit",
+    "position": "MIDDLE",
+    "settings": [
+      {
+        "name": "count",
+        "type": "Int",
+        "defaultValue": "10",
+        "displayName": "Count",
+        "description": "The maximum number of items to forward.",
+        "hidden": false,
+        "censored": false,
+        "details": null
+      }
+    ],
+    "input": [],
+    "receiveEmptyInput": false,
+    "output": []
+  }
+}

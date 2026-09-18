@@ -1,0 +1,75 @@
+{
+  "type": "diffinjector",
+  "metadata": {
+    "displayName": "Diff Injector",
+    "icon": {
+      "name": "lucide-file-diff",
+      "color": null
+    },
+    "type": "diffinjector",
+    "position": "MIDDLE",
+    "settings": [
+      {
+        "name": "excludeFields",
+        "type": "Collection",
+        "defaultValue": null,
+        "displayName": "Exclude Fields",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Collection",
+          "elementDetails": {
+            "type": "Plaintext",
+            "lines": 1,
+            "defaultValue": "",
+            "language": null
+          }
+        }
+      },
+      {
+        "name": "emitCreated",
+        "type": "Boolean",
+        "defaultValue": "true",
+        "displayName": "Emit Created",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": null
+      },
+      {
+        "name": "emitUpdated",
+        "type": "Boolean",
+        "defaultValue": "true",
+        "displayName": "Emit Updated",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": null
+      },
+      {
+        "name": "emitDeleted",
+        "type": "Boolean",
+        "defaultValue": "true",
+        "displayName": "Emit Deleted",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": null
+      },
+      {
+        "name": "emitUnchanged",
+        "type": "Boolean",
+        "defaultValue": "false",
+        "displayName": "Emit Unchanged",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": null
+      }
+    ],
+    "input": [],
+    "receiveEmptyInput": true,
+    "output": []
+  }
+}

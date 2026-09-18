@@ -1,0 +1,368 @@
+{
+  "type": "http",
+  "metadata": {
+    "displayName": "HTTP",
+    "icon": {
+      "name": "material-symbols-http-rounded",
+      "color": null
+    },
+    "type": "http",
+    "position": "START",
+    "settings": [
+      {
+        "name": "serializeOutputAs",
+        "type": "Enum",
+        "defaultValue": null,
+        "displayName": "Serialize Output As",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Enum",
+          "values": [
+            {
+              "value": "TEXT",
+              "displayName": "Text"
+            },
+            {
+              "value": "JSON",
+              "displayName": "Json"
+            }
+          ]
+        }
+      },
+      {
+        "name": "requests",
+        "type": "Collection",
+        "defaultValue": null,
+        "displayName": "Requests",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Collection",
+          "elementDetails": {
+            "type": "Object",
+            "className": "me.snoty.integration.builtin.http.HttpNodeInput",
+            "schema": [
+              {
+                "name": "url",
+                "type": "Plaintext",
+                "defaultValue": null,
+                "displayName": "Url",
+                "description": null,
+                "hidden": false,
+                "censored": false,
+                "details": {
+                  "type": "Plaintext",
+                  "lines": 1,
+                  "defaultValue": "",
+                  "language": null
+                }
+              },
+              {
+                "name": "method",
+                "type": "Enum",
+                "defaultValue": null,
+                "displayName": "Method",
+                "description": null,
+                "hidden": false,
+                "censored": false,
+                "details": {
+                  "type": "Enum",
+                  "values": [
+                    {
+                      "value": "GET",
+                      "displayName": "Get"
+                    },
+                    {
+                      "value": "POST",
+                      "displayName": "Post"
+                    },
+                    {
+                      "value": "PUT",
+                      "displayName": "Put"
+                    },
+                    {
+                      "value": "DELETE",
+                      "displayName": "Delete"
+                    }
+                  ]
+                }
+              },
+              {
+                "name": "headers",
+                "type": "Map",
+                "defaultValue": null,
+                "displayName": "Headers",
+                "description": null,
+                "hidden": false,
+                "censored": false,
+                "details": {
+                  "type": "Map",
+                  "keyDetails": {
+                    "type": "Plaintext",
+                    "lines": 1,
+                    "defaultValue": "",
+                    "language": null
+                  },
+                  "valueDetails": {
+                    "type": "Plaintext",
+                    "lines": 1,
+                    "defaultValue": "",
+                    "language": null
+                  }
+                }
+              },
+              {
+                "name": "body",
+                "type": "Plaintext",
+                "defaultValue": null,
+                "displayName": "Body",
+                "description": null,
+                "hidden": false,
+                "censored": false,
+                "details": {
+                  "type": "Plaintext",
+                  "lines": 1,
+                  "defaultValue": "",
+                  "language": null
+                }
+              },
+              {
+                "name": "expectSuccess",
+                "type": "Boolean",
+                "defaultValue": "false",
+                "displayName": "Expect Success",
+                "description": "Whether to expect the request to succeed. When set to false, non-200 status codes will cause the Flow to fail.",
+                "hidden": false,
+                "censored": false,
+                "details": null
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "proxy",
+        "type": "Credential",
+        "defaultValue": null,
+        "displayName": "Proxy",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Credential",
+          "credentialType": "Proxy",
+          "schema": [
+            {
+              "name": "type",
+              "type": "Enum",
+              "defaultValue": null,
+              "displayName": "Type",
+              "description": null,
+              "hidden": false,
+              "censored": false,
+              "details": {
+                "type": "Enum",
+                "values": [
+                  {
+                    "value": "HTTP",
+                    "displayName": "HTTP"
+                  },
+                  {
+                    "value": "SOCKS",
+                    "displayName": "SOCKS"
+                  }
+                ]
+              }
+            },
+            {
+              "name": "host",
+              "type": "Plaintext",
+              "defaultValue": null,
+              "displayName": "Host",
+              "description": null,
+              "hidden": false,
+              "censored": false,
+              "details": {
+                "type": "Plaintext",
+                "lines": 1,
+                "defaultValue": "",
+                "language": null
+              }
+            },
+            {
+              "name": "port",
+              "type": "Int",
+              "defaultValue": "8080",
+              "displayName": "Port",
+              "description": null,
+              "hidden": false,
+              "censored": false,
+              "details": null
+            }
+          ]
+        }
+      }
+    ],
+    "input": [
+      {
+        "name": "url",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Url",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      },
+      {
+        "name": "method",
+        "type": "Enum",
+        "defaultValue": null,
+        "displayName": "Method",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Enum",
+          "values": [
+            {
+              "value": "GET",
+              "displayName": "Get"
+            },
+            {
+              "value": "POST",
+              "displayName": "Post"
+            },
+            {
+              "value": "PUT",
+              "displayName": "Put"
+            },
+            {
+              "value": "DELETE",
+              "displayName": "Delete"
+            }
+          ]
+        }
+      },
+      {
+        "name": "headers",
+        "type": "Map",
+        "defaultValue": null,
+        "displayName": "Headers",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Map",
+          "keyDetails": {
+            "type": "Plaintext",
+            "lines": 1,
+            "defaultValue": "",
+            "language": null
+          },
+          "valueDetails": {
+            "type": "Plaintext",
+            "lines": 1,
+            "defaultValue": "",
+            "language": null
+          }
+        }
+      },
+      {
+        "name": "body",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Body",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      },
+      {
+        "name": "expectSuccess",
+        "type": "Boolean",
+        "defaultValue": "false",
+        "displayName": "Expect Success",
+        "description": "Whether to expect the request to succeed. When set to false, non-200 status codes will cause the Flow to fail.",
+        "hidden": false,
+        "censored": false,
+        "details": null
+      }
+    ],
+    "receiveEmptyInput": false,
+    "output": [
+      {
+        "name": "url",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Url",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      },
+      {
+        "name": "statusCode",
+        "type": "Int",
+        "defaultValue": null,
+        "displayName": "Status Code",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": null
+      },
+      {
+        "name": "headers",
+        "type": "Map",
+        "defaultValue": null,
+        "displayName": "Headers",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Map",
+          "keyDetails": {
+            "type": "Plaintext",
+            "lines": 1,
+            "defaultValue": "",
+            "language": null
+          },
+          "valueDetails": {
+            "type": "Plaintext",
+            "lines": 1,
+            "defaultValue": "",
+            "language": null
+          }
+        }
+      },
+      {
+        "name": "body",
+        "type": "Any",
+        "defaultValue": null,
+        "displayName": "Body",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": null
+      }
+    ]
+  }
+}

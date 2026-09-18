@@ -1,0 +1,32 @@
+{
+  "type": "filter",
+  "metadata": {
+    "displayName": "Filter",
+    "icon": {
+      "name": "lucide-funnel",
+      "color": null
+    },
+    "type": "filter",
+    "position": "MIDDLE",
+    "settings": [
+      {
+        "name": "expression",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Expression",
+        "description": "Liquid template returning `true` (keep element) or `false` (drop element)",
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": "liquid"
+        }
+      }
+    ],
+    "input": [],
+    "receiveEmptyInput": false,
+    "output": []
+  }
+}

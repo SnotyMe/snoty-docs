@@ -1,0 +1,64 @@
+{
+  "type": "split",
+  "metadata": {
+    "displayName": "Split",
+    "icon": {
+      "name": "lucide-split",
+      "color": null
+    },
+    "type": "split",
+    "position": "MIDDLE",
+    "settings": [
+      {
+        "name": "key",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Key",
+        "description": "The key on which to split the input data. Other elements will be shared between the individual outputs.",
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      },
+      {
+        "name": "loopThroughObjectKeys",
+        "type": "Boolean",
+        "defaultValue": "true",
+        "displayName": "Loop Through Object Keys",
+        "description": "If false, the Node will throw an error instead of looping through object values.",
+        "hidden": false,
+        "censored": false,
+        "details": null
+      },
+      {
+        "name": "behavior",
+        "type": "Enum",
+        "defaultValue": "REPLACE_ROOT",
+        "displayName": "Behavior",
+        "description": null,
+        "hidden": true,
+        "censored": false,
+        "details": {
+          "type": "Enum",
+          "values": [
+            {
+              "value": "REPLACE_ROOT",
+              "displayName": "Replace Root"
+            },
+            {
+              "value": "REPLACE_KEY",
+              "displayName": "Replace Key"
+            }
+          ]
+        }
+      }
+    ],
+    "input": [],
+    "receiveEmptyInput": false,
+    "output": []
+  }
+}

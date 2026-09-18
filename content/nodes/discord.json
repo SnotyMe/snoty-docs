@@ -1,0 +1,234 @@
+{
+  "type": "discord",
+  "metadata": {
+    "displayName": "Discord",
+    "icon": {
+      "name": "logos-discord-icon",
+      "color": null
+    },
+    "type": "discord",
+    "position": "END",
+    "settings": [
+      {
+        "name": "credentials",
+        "type": "Credential",
+        "defaultValue": null,
+        "displayName": "Credentials",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Credential",
+          "credentialType": "DiscordWebhook",
+          "schema": [
+            {
+              "name": "webhookUrl",
+              "type": "Plaintext",
+              "defaultValue": null,
+              "displayName": "Webhook URL",
+              "description": null,
+              "hidden": false,
+              "censored": true,
+              "details": {
+                "type": "Plaintext",
+                "lines": 1,
+                "defaultValue": "",
+                "language": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "emptyIsError",
+        "type": "Boolean",
+        "defaultValue": null,
+        "displayName": "Empty is Error",
+        "description": "If enabled, no message content will result in an error",
+        "hidden": false,
+        "censored": false,
+        "details": null
+      }
+    ],
+    "input": [
+      {
+        "name": "content",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Content",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 3,
+          "defaultValue": "",
+          "language": null
+        }
+      },
+      {
+        "name": "username",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Username",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      },
+      {
+        "name": "avatarUrl",
+        "type": "Plaintext",
+        "defaultValue": null,
+        "displayName": "Avatar Url",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Plaintext",
+          "lines": 1,
+          "defaultValue": "",
+          "language": null
+        }
+      },
+      {
+        "name": "embeds",
+        "type": "Collection",
+        "defaultValue": null,
+        "displayName": "Embeds",
+        "description": null,
+        "hidden": false,
+        "censored": false,
+        "details": {
+          "type": "Collection",
+          "elementDetails": {
+            "type": "Object",
+            "className": "me.snoty.integration.discord.DiscordWebhook.Embed",
+            "schema": [
+              {
+                "name": "title",
+                "type": "Plaintext",
+                "defaultValue": null,
+                "displayName": "Title",
+                "description": null,
+                "hidden": false,
+                "censored": false,
+                "details": {
+                  "type": "Plaintext",
+                  "lines": 1,
+                  "defaultValue": "",
+                  "language": null
+                }
+              },
+              {
+                "name": "description",
+                "type": "Plaintext",
+                "defaultValue": null,
+                "displayName": "Description",
+                "description": null,
+                "hidden": false,
+                "censored": false,
+                "details": {
+                  "type": "Plaintext",
+                  "lines": 1,
+                  "defaultValue": "",
+                  "language": null
+                }
+              },
+              {
+                "name": "url",
+                "type": "Plaintext",
+                "defaultValue": null,
+                "displayName": "Url",
+                "description": null,
+                "hidden": false,
+                "censored": false,
+                "details": {
+                  "type": "Plaintext",
+                  "lines": 1,
+                  "defaultValue": "",
+                  "language": null
+                }
+              },
+              {
+                "name": "color",
+                "type": "Int?",
+                "defaultValue": null,
+                "displayName": "Color",
+                "description": null,
+                "hidden": false,
+                "censored": false,
+                "details": null
+              },
+              {
+                "name": "fields",
+                "type": "Collection",
+                "defaultValue": null,
+                "displayName": "Fields",
+                "description": null,
+                "hidden": false,
+                "censored": false,
+                "details": {
+                  "type": "Collection",
+                  "elementDetails": {
+                    "type": "Object",
+                    "className": "me.snoty.integration.discord.DiscordWebhook.Field",
+                    "schema": [
+                      {
+                        "name": "name",
+                        "type": "Plaintext",
+                        "defaultValue": null,
+                        "displayName": "Name",
+                        "description": null,
+                        "hidden": false,
+                        "censored": false,
+                        "details": {
+                          "type": "Plaintext",
+                          "lines": 1,
+                          "defaultValue": "",
+                          "language": null
+                        }
+                      },
+                      {
+                        "name": "value",
+                        "type": "Plaintext",
+                        "defaultValue": null,
+                        "displayName": "Value",
+                        "description": null,
+                        "hidden": false,
+                        "censored": false,
+                        "details": {
+                          "type": "Plaintext",
+                          "lines": 1,
+                          "defaultValue": "",
+                          "language": null
+                        }
+                      },
+                      {
+                        "name": "inline",
+                        "type": "Boolean",
+                        "defaultValue": null,
+                        "displayName": "Inline",
+                        "description": null,
+                        "hidden": false,
+                        "censored": false,
+                        "details": null
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "receiveEmptyInput": false,
+    "output": null
+  }
+}
