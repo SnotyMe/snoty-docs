@@ -28,3 +28,30 @@
     --ui-bg-accented: var(--color-neutral-700);
     --ui-bg-inverted: white;
 }
+
+.embedded {
+    & [data-content-id] ~ * {
+        /*
+        only the actual content is important
+        removes GitHub buttons & surrounding articles
+        */
+        display: none;
+    }
+
+    & *:has(> [data-content-id]) {
+        /* extra padding to hold distance to now non-existent footer */
+        padding-bottom: 0;
+    }
+
+    & nav.sticky {
+        /* keep at top of screen at all times */
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    &:has(nav.sticky) [data-slot="root"]:has(> [data-slot="headline"]) {
+        /* extra margin to account for the `position: fixed` ToC */
+        margin-top: 3em;
+    }
+}
