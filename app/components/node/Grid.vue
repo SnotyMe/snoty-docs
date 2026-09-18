@@ -17,7 +17,7 @@ function hasDocs(node: NodesCollectionItem) {
   const allDocumentedNodes = documentedNodes.value
   if (!allDocumentedNodes) return
 
-  return allDocumentedNodes.some(it => it.path.endsWith(node.descriptor.name))
+  return allDocumentedNodes.some(it => it.path.endsWith(node.type))
 }
 </script>
 
@@ -26,7 +26,7 @@ function hasDocs(node: NodesCollectionItem) {
     <template v-for="node of nodes">
       <ProseCard
           :title="node.metadata.displayName"
-          :to="hasDocs(node) ? `/nodes/builtin/${node.descriptor.name}` : undefined"
+          :to="hasDocs(node) ? `/nodes/builtin/${node.type}` : undefined"
           :icon="node.metadata.icon"
           :ui="{ title: 'w-full inline-flex items-center gap-2' }"
       >

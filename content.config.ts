@@ -10,9 +10,7 @@ export default defineContentConfig({
             type: 'data',
             source: 'nodes/**.json',
             schema: z.object({
-                descriptor: z.object({
-                    name: z.string(),
-                }),
+                type: z.string(),
                 metadata: z.object({
                     displayName: z.string(),
                     icon: z.object({
