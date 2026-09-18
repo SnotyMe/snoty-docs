@@ -11,7 +11,7 @@ route.meta.toc = toc
 <template>
   <div v-if="terms">
     <div v-for="term of terms">
-      <ProseH2>{{ term.title }}</ProseH2>
+      <ProseH2 :id="term.title.toLowerCase()">{{ term.title }}</ProseH2>
       <ContentRenderer :value="term.body" />
     </div>
   </div>
