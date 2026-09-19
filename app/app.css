@@ -30,7 +30,7 @@
 }
 
 .embedded {
-    & [data-content-id] ~ * {
+    & .mt-8.space-y-12.pb-24 > div ~ * {
         /*
         only the actual content is important
         removes GitHub buttons & surrounding articles
@@ -38,7 +38,7 @@
         display: none;
     }
 
-    & *:has(> [data-content-id]) {
+    & .mt-8.space-y-12.pb-24 {
         /* extra padding to hold distance to now non-existent footer */
         padding-bottom: 0;
     }
