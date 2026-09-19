@@ -1,3 +1,5 @@
+import { locales } from "./shared/i18n"
+
 export default defineNuxtConfig({
     extends: ['docus'],
     modules: [
@@ -6,12 +8,7 @@ export default defineNuxtConfig({
 
     i18n: {
         defaultLocale: 'en',
-        locales: [
-            {
-                code: 'en',
-                name: 'English',
-            },
-        ],
+        locales,
     },
 
     devServer: {
