@@ -34,4 +34,10 @@ export default defineNuxtConfig({
     llms: {
         domain: 'https://docs.snoty.me',
     },
+
+    routeRules: {
+        "/sitemap-nodes": {
+            prerender: true,
+        },
+    }
 })
