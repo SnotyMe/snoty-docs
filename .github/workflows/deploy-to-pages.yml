@@ -14,11 +14,18 @@ jobs:
         with:
           node-version: "24"
       - run: pnpm install
-      - run: pnpm run build:pages
+      - name: Build Docs
+        run: |
+          pnpm run build:pages
+          mv ./.output/public .dist
+      - name: Build Docs (Embed)
+        run: |
+          DOCS_EMBED=true pnpm run build:pages
+          mv ./.output/public .dist/embed
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          path: ./.output/public
+          path: .dist
 
   deploy:
     needs: build

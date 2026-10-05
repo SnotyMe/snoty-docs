@@ -1,5 +1,7 @@
 import { locales } from "./shared/i18n"
 
+const isEmbedBuild = process.env.DOCS_EMBED == 'true'
+
 export default defineNuxtConfig({
     extends: ['docus'],
     modules: [
@@ -9,6 +11,21 @@ export default defineNuxtConfig({
     i18n: {
         defaultLocale: 'en',
         locales,
+    },
+
+    app: {
+        baseURL: isEmbedBuild ? '/embed' : '/',
+    },
+
+    runtimeConfig: {
+        public: {
+            embed: isEmbedBuild,
+        },
+    },
+
+    robots: {
+        robotsTxt: !isEmbedBuild,
+        disallow: ['/embed'],
     },
 
     devServer: {
@@ -39,5 +56,5 @@ export default defineNuxtConfig({
         "/sitemap-nodes": {
             prerender: true,
         },
-    }
+    },
 })
