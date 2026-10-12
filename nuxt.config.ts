@@ -52,6 +52,10 @@ export default defineNuxtConfig({
         domain: 'https://docs.snoty.me',
     },
 
+    site: {
+        url: "https://docs.snoty.me",
+    },
+
     routeRules: {
         "/sitemap-nodes": {
             prerender: true,
