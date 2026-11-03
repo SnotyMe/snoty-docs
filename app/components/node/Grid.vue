@@ -7,18 +7,6 @@ const { data: nodes } = await useAsyncData('nodes', () => {
       .all()
 })
 
-const { data: documentedNodes } = await useAsyncData('nodes-documented', () => {
-  return queryCollection('docs_en')
-      .where("path", "LIKE", "%/nodes/builtin/%")
-      .all()
-})
-
-function hasDocs(node: NodesCollectionItem) {
-  const allDocumentedNodes = documentedNodes.value
-  if (!allDocumentedNodes) return
-
-  return allDocumentedNodes.some(it => it.path.endsWith(node.type))
-}
 </script>
 
 <template>
@@ -26,7 +14,7 @@ function hasDocs(node: NodesCollectionItem) {
     <template v-for="node of nodes">
       <ProseCard
           :title="node.metadata.displayName"
-          :to="hasDocs(node) ? `/nodes/builtin/${node.type}` : undefined"
+          :to="`/nodes/builtin/${node.type}`"
           :icon="node.metadata.icon"
           :ui="{ title: 'w-full inline-flex items-center gap-2' }"
       >
@@ -38,9 +26,8 @@ function hasDocs(node: NodesCollectionItem) {
               class="size-5"
           />
           {{ node.metadata.displayName }}
-          <UIcon v-if="hasDocs(node)" name="i-lucide-file-text" class="ml-auto"/>
+          <UIcon name="i-lucide-file-text" class="ml-auto"/>
         </template>
-        <NodeSchema :node="node" />
       </ProseCard>
     </template>
   </ProseCardGroup>
