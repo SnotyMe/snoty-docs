@@ -17,6 +17,8 @@ export default defineContentConfig({
                         name: z.string(),
                         color: z.string().nullable(),
                     }).nullable(),
+                    input: z.array(z.any()).nullable(),
+                    output: z.array(z.any()).nullable(),
                 })
             })
         }),

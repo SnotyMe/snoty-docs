@@ -40,6 +40,7 @@ function hasDocs(node: NodesCollectionItem) {
           {{ node.metadata.displayName }}
           <UIcon v-if="hasDocs(node)" name="i-lucide-file-text" class="ml-auto"/>
         </template>
+        <NodeSchema :node="node" />
       </ProseCard>
     </template>
   </ProseCardGroup>
