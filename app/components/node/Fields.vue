@@ -1,5 +1,5 @@
 <script setup lang="ts">
-interface SchemaField {
+export interface SchemaField {
   name: string
   type: string
   displayName: string
@@ -22,7 +22,7 @@ function nestedSchema(field: SchemaField) {
 </script>
 
 <template>
-  <ProseFieldGroup class="space-y-3">
+  <ProseFieldGroup>
     <ProseField
       v-for="field in fields"
       :key="field.name"
@@ -33,7 +33,7 @@ function nestedSchema(field: SchemaField) {
       <NodeFields
         v-if="nestedSchema(field)?.length"
         :fields="nestedSchema(field)!"
-        class="mt-3 border-l border-default pl-3"
+        class="border-l border-default pl-5"
       />
     </ProseField>
   </ProseFieldGroup>

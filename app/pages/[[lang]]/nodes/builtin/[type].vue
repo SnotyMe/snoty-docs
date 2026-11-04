@@ -12,20 +12,24 @@ const [{ data: page }, { data: node }] = await Promise.all([
 ])
 
 if (!node.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Node not found', fatal: true })
+  throw createError({statusCode: 404, statusMessage: 'Node not found', fatal: false})
 }
 
-const title = computed(() => page.value?.title || node.value?.metadata.displayName || nodeType.value)
+const title = computed(() => node.value?.metadata.displayName || nodeType.value)
+
+definePageMeta({
+  layout: "docs"
+})
 </script>
 
 <template>
   <UPage>
-    <UPageHeader :title="title" />
+    <UPageHeader :title="title"/>
     <UPageBody>
-      <ContentRenderer v-if="page" :value="page" />
-      <USeparator v-if="page" class="my-8" />
-      <h2 class="mb-6 text-2xl font-bold">Input and output schema</h2>
-      <NodeSchema :node="node" />
+      <ContentRenderer v-if="page" :value="page"/>
+      <USeparator v-if="page" class="my-8"/>
+      <h2 class="mb-6 text-2xl font-bold">Schema</h2>
+      <NodeSchema :node="node"/>
     </UPageBody>
   </UPage>
 </template>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { NodesCollectionItem } from "@nuxt/content"
+import FieldsGroup from "~/components/node/FieldsGroup.vue";
 
 const props = defineProps<{
   node: NodesCollectionItem
@@ -11,16 +12,8 @@ const output = props.node.metadata.output
 
 <template>
   <div class="grid gap-6 sm:grid-cols-2">
-    <section>
-      <h3 class="mb-3 text-sm font-semibold">Input</h3>
-      <NodeFields v-if="input?.length" :fields="input" />
-      <p v-else class="text-sm text-dimmed">None</p>
-    </section>
+    <FieldsGroup v-if="input" title="Input" :fields="input"/>
 
-    <section>
-      <h3 class="mb-3 text-sm font-semibold">Output</h3>
-      <NodeFields v-if="output?.length" :fields="output" />
-      <p v-else class="text-sm text-dimmed">None</p>
-    </section>
+    <FieldsGroup v-if="output" title="Output" :fields="output"/>
   </div>
 </template>
