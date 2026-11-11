@@ -54,6 +54,7 @@ export default defineNuxtConfig({
 
     site: {
         url: "https://docs.snoty.me",
+        marketingUrl: "https://snoty.me",
     },
 
     routeRules: {
