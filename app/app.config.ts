@@ -4,6 +4,11 @@ export default defineAppConfig({
             primary: "violet",
             neutral: "neutral",
         },
+        pageFeature: {
+            slots: {
+                root: "p-6 border border-primary/30 hover:border-primary"
+            }
+        }
     },
     header: {
         logo: {
